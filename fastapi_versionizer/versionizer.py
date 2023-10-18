@@ -123,7 +123,7 @@ class Versionizer:
             )
             if self._callback:
                 self._callback(version_router, version, version_prefix)
-            self._app.include_router(router=version_router)
+            self._app.include_router(router=version_router, prefix=version_prefix)
 
         if self._latest_prefix is not None and routes_by_key and version:
             latest_router = self._build_version_router(
@@ -133,7 +133,7 @@ class Versionizer:
             )
             if self._callback:
                 self._callback(latest_router, version, self._latest_prefix)
-            self._app.include_router(router=latest_router)
+            self._app.include_router(router=latest_router, prefix=self._latest_prefix)
 
         if self._include_versions_route:
             self._add_versions_route(versions=versions)
@@ -150,9 +150,7 @@ class Versionizer:
         version_prefix: str,
         routes_by_key: Dict[Tuple[str, str], APIRoute]
     ) -> APIRouter:
-        router = APIRouter(
-            prefix=version_prefix
-        )
+        router = APIRouter()
         routes_by_key = dict(natsorted(routes_by_key.items())) if self._sort_routes else routes_by_key
         for route in routes_by_key.values():
             self._add_route_to_router(route=route, router=router, version=version)
@@ -189,7 +187,7 @@ class Versionizer:
 
             for route in routes_by_end_version[version]:
                 route_keys = self._get_route_keys(route=route)
-                for route_key, method_route in route_keys.items():
+                for route_key, _ in route_keys.items():
                     del curr_version_routes_by_key[route_key]
 
             routes_by_version[version] = dict(curr_version_routes_by_key)
@@ -215,6 +213,12 @@ class Versionizer:
         title = f'{self._app.title} - {version_str}'
 
         if self._include_version_openapi_route and self._app.openapi_url is not None:
+            servers = [{"url": version_prefix}]
+            if len(self._app.servers) > 0:
+                servers = []
+                for s in self._app.servers:
+                    s["url"] += version_prefix
+                    servers.append(s)
             @router.get(self._app.openapi_url, include_in_schema=False)
             async def get_openapi() -> Any:
                 openapi_params: Dict[str, Any] = {
@@ -225,7 +229,7 @@ class Versionizer:
                     'terms_of_service': self._app.terms_of_service,
                     'contact': self._app.contact,
                     'license_info': self._app.license_info,
-                    'servers': self._app.servers
+                    'servers': servers
                 }
 
                 if hasattr(self._app, 'summary'):
@@ -301,7 +305,7 @@ class Versionizer:
             ):
                 kwargs['deprecated'] = True
 
-        for _ in range(10000):
+        for _ in range(len(kwargs)):
             try:
                 return router.add_api_route(**kwargs)
             except TypeError as e:
