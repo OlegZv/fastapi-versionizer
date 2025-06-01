@@ -7,6 +7,7 @@ This project addresses issues with `fastapi_versioning` and adds some additional
 ## Installation
 `pip install fastapi-versionizer`
 
+
 ## Examples
 You can find examples in the [examples](https://github.com/alexschimpf/fastapi-versionizer/tree/main/examples) directory.
 
