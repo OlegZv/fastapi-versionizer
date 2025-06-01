@@ -1,3 +1,69 @@
+## 2.0.0 (2025-06-01)
+
+* chore: Release 2.0.0 ([b1312a5](https://github.com/OlegZv/fastapi-versionizer/commit/b1312a5))
+* chore: Release 2.0.0 ([4550daa](https://github.com/OlegZv/fastapi-versionizer/commit/4550daa))
+* chore: Release 2.1.0 ([14dde5e](https://github.com/OlegZv/fastapi-versionizer/commit/14dde5e))
+* chore: Release 2.1.1 ([c0bdd11](https://github.com/OlegZv/fastapi-versionizer/commit/c0bdd11))
+* chore: Release 2.1.2 ([b36b88b](https://github.com/OlegZv/fastapi-versionizer/commit/b36b88b))
+* chore: Release 2.1.3 ([67eb013](https://github.com/OlegZv/fastapi-versionizer/commit/67eb013))
+* chore: Release 2.1.4 ([42a5800](https://github.com/OlegZv/fastapi-versionizer/commit/42a5800))
+* chore: Release 2.1.5 ([29670b2](https://github.com/OlegZv/fastapi-versionizer/commit/29670b2))
+* chore: Release 3.0.0 ([c8cf1b1](https://github.com/OlegZv/fastapi-versionizer/commit/c8cf1b1))
+* chore: Release 3.0.1 ([29b8768](https://github.com/OlegZv/fastapi-versionizer/commit/29b8768))
+* chore: Release 3.0.2 ([c54fbe3](https://github.com/OlegZv/fastapi-versionizer/commit/c54fbe3))
+* chore: Release 3.0.3 ([3ccf2ba](https://github.com/OlegZv/fastapi-versionizer/commit/3ccf2ba))
+* chore: Release 3.0.4 ([5088915](https://github.com/OlegZv/fastapi-versionizer/commit/5088915))
+* chore: Release 4.0.0 ([79f907e](https://github.com/OlegZv/fastapi-versionizer/commit/79f907e))
+* chore: Release 4.0.1 ([48a678c](https://github.com/OlegZv/fastapi-versionizer/commit/48a678c))
+* chore: Update packages to remove deprecation notice (#4) ([9886359](https://github.com/OlegZv/fastapi-versionizer/commit/9886359)), closes [#4](https://github.com/OlegZv/fastapi-versionizer/issues/4)
+* Both changes test (#3) ([880fc79](https://github.com/OlegZv/fastapi-versionizer/commit/880fc79)), closes [#3](https://github.com/OlegZv/fastapi-versionizer/issues/3)
+* docs: Cleaned up README ([e7f75b4](https://github.com/OlegZv/fastapi-versionizer/commit/e7f75b4))
+* docs: Document static file mount gotcha ([f92f054](https://github.com/OlegZv/fastapi-versionizer/commit/f92f054))
+* docs: Made README links absolute ([86f2d16](https://github.com/OlegZv/fastapi-versionizer/commit/86f2d16))
+* fix: Added Websocket support back ([211a66e](https://github.com/OlegZv/fastapi-versionizer/commit/211a66e))
+* fix: Fixed issue where custom latest_prefix wasn't getting passed to callback correctly ([020d32b](https://github.com/OlegZv/fastapi-versionizer/commit/020d32b))
+* fix: Fixed issue with lifespan support ([ee40d11](https://github.com/OlegZv/fastapi-versionizer/commit/ee40d11))
+* fix: Fixed issue with middleware stack support ([e96cf0d](https://github.com/OlegZv/fastapi-versionizer/commit/e96cf0d))
+* fix: Fixed issue with OpenAPI metadata not showing up for versioned doc pages ([87093b9](https://github.com/OlegZv/fastapi-versionizer/commit/87093b9))
+* fix: Fixed issue with OpenAPI tags for versioned docs ([dbc434c](https://github.com/OlegZv/fastapi-versionizer/commit/dbc434c))
+* fix: Fixed issue with root_path/servers in versioned doc pages ([a82a343](https://github.com/OlegZv/fastapi-versionizer/commit/a82a343))
+* fix: Fixed OAuth issue for versioned Swagger pages ([94b7a37](https://github.com/OlegZv/fastapi-versionizer/commit/94b7a37))
+* fix: Fixed oauth2 redirect bug for versioned routes ([17f0172](https://github.com/OlegZv/fastapi-versionizer/commit/17f0172))
+* fix: Now using app's openapi_url field for OpenAPI URL ([e97d5f9](https://github.com/OlegZv/fastapi-versionizer/commit/e97d5f9))
+* ci: Fixed PyPI deploy ([c1ec66a](https://github.com/OlegZv/fastapi-versionizer/commit/c1ec66a))
+* breaking: Dropped support for python 3.7 ([00607b8](https://github.com/OlegZv/fastapi-versionizer/commit/00607b8))
+* breaking: Redesigned FastAPI versionizer ([4cd0fd1](https://github.com/OlegZv/fastapi-versionizer/commit/4cd0fd1))
+* breaking: Versionizer now versions a FastAPI app in place ([8217e80](https://github.com/OlegZv/fastapi-versionizer/commit/8217e80))
+* feat: Added include_versions_route parameter ([42dcaf7](https://github.com/OlegZv/fastapi-versionizer/commit/42dcaf7))
+
+## [2.0.0](https://github.com/OlegZv/fastapi-versionizer/compare/v1.2.0...v2.0.0) (2025-06-01)
+
+
+### Breaking Changes
+
+* Dropped support for python 3.7 ([00607b8](https://github.com/OlegZv/fastapi-versionizer/commit/00607b8f1ae0db23b7e63666b0629307a3a631dc))
+* Redesigned FastAPI versionizer ([4cd0fd1](https://github.com/OlegZv/fastapi-versionizer/commit/4cd0fd1d3e93eb1845439743ed907d562a508bb9))
+* Versionizer now versions a FastAPI app in place ([8217e80](https://github.com/OlegZv/fastapi-versionizer/commit/8217e80b3925a7d30ef77e6eb8693b271fe02247))
+
+
+### Features
+
+* Added include_versions_route parameter ([42dcaf7](https://github.com/OlegZv/fastapi-versionizer/commit/42dcaf73bf2bff7d6b6d734c8c30137b73aa6f06))
+
+
+### Bug Fixes
+
+* Added Websocket support back ([211a66e](https://github.com/OlegZv/fastapi-versionizer/commit/211a66e8aac56dbf2d5ffc94d6c65959044ca5dd))
+* Fixed issue where custom latest_prefix wasn't getting passed to callback correctly ([020d32b](https://github.com/OlegZv/fastapi-versionizer/commit/020d32b13143c1a6d98b449fec17cf23d0d8ed86))
+* Fixed issue with lifespan support ([ee40d11](https://github.com/OlegZv/fastapi-versionizer/commit/ee40d11cba743c07216370715a7fbcd23f0a145e))
+* Fixed issue with middleware stack support ([e96cf0d](https://github.com/OlegZv/fastapi-versionizer/commit/e96cf0d004d20a65668d85f5ae46d427d958f5ef))
+* Fixed issue with OpenAPI metadata not showing up for versioned doc pages ([87093b9](https://github.com/OlegZv/fastapi-versionizer/commit/87093b95766efa0bbc49777fae75efc55e489747))
+* Fixed issue with OpenAPI tags for versioned docs ([dbc434c](https://github.com/OlegZv/fastapi-versionizer/commit/dbc434c85170cbc1802ff167e33c8ab4204d64d3))
+* Fixed issue with root_path/servers in versioned doc pages ([a82a343](https://github.com/OlegZv/fastapi-versionizer/commit/a82a343de350b7a323a8a46b023b1dc897c1302b))
+* Fixed OAuth issue for versioned Swagger pages ([94b7a37](https://github.com/OlegZv/fastapi-versionizer/commit/94b7a37de66a3fe5304d26460371788f38c308ef))
+* Fixed oauth2 redirect bug for versioned routes ([17f0172](https://github.com/OlegZv/fastapi-versionizer/commit/17f0172bf1a6cf4d4f39f94107307557facbf4ff))
+* Now using app's openapi_url field for OpenAPI URL ([e97d5f9](https://github.com/OlegZv/fastapi-versionizer/commit/e97d5f95eb6b8d006c03fff0bfbfd8136c1b2eec))
+
 ## [4.0.1](https://github.com/alexschimpf/fastapi-versionizer/compare/v4.0.0...v4.0.1) (2024-03-05)
 
 
